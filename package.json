@@ -1,0 +1,30 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "nothing",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsnd --respawn index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anhvin007/nodejs-blog.git"
+  },
+  "keywords": [
+    "nodejs",
+    "blog"
+  ],
+  "author": "anhvin007",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anhvin007/nodejs-blog/issues"
+  },
+  "homepage": "https://github.com/anhvin007/nodejs-blog#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  }
+}
