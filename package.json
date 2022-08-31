@@ -2,9 +2,10 @@
   "name": "learn",
   "version": "1.0.0",
   "description": "nothing",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "tsnd --respawn index.js",
+    "start": "ts-node-dev --respawn --transpile-only src/index.js",
+    "watch": "node-sass -w src/resources/scss/app.scss src/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,9 +23,12 @@
   },
   "homepage": "https://github.com/anhvin007/nodejs-blog#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^7.0.1",
     "ts-node-dev": "^2.0.0"
   }
 }
