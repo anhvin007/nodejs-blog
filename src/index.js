@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const { engine } = require('express-handlebars');
 const app = express();
 
-const route = require('./routes')
+const route = require('./routes');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -15,16 +15,18 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'resources/views'));
 
 // HTTP logger
-app.use(morgan('dev'))
+app.use(morgan('dev'));
 
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(
+    express.urlencoded({
+        extended: true,
+    }),
+);
 app.use(express.json());
 
 // Route init
 route(app);
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening on port ${port}`);
 });
