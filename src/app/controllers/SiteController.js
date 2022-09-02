@@ -1,7 +1,13 @@
+const Post = require('../../config/models/Post.js');
+
 class SiteController {
     // [GET] /
     home(req, res) {
-        res.render('home');
+        Post.find({}, function (err, post) {
+            if (!err) res.json(post);
+            else res.status(400).json({ err: 'ERROR!!!' });
+        });
+        // res.render('home');
     }
 
     // [GET] /search
