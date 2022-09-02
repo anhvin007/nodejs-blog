@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // template engine
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, 'resources/views'));
+app.set('views', path.join(__dirname, 'resources', 'views'));
 
 // HTTP logger
 app.use(morgan('dev'));
@@ -31,5 +31,5 @@ route(app);
 db.connect();
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`App listening on port ${port}`);
 });
