@@ -4,3 +4,8 @@
 npm test
 lint-staged
 lint-staged
+npm test~
+lint-staged
+lint-staged
+lint-staged
+lint-staged
