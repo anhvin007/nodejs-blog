@@ -1,0 +1,24 @@
+<!-- As a heading -->
+{{> navbars}}
+
+
+<div class="container">
+    <div class="row">
+        {{#each posts}}
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="card text-center">
+                <div class="card-header">
+                </div>
+                <a href="/posts/{{this.slug}}">
+                    <div class="card-body">
+                        <h2 class="card-title">{{this.title}}</h2>
+                        <p class="card-text">{{this.description}}</p>
+                    </div>
+                </a>
+                <div class="card-footer text-muted">
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,4 +1,5 @@
 const newsRoute = require('./news');
+const postsRoute = require('./posts')
 const siteRoute = require('./site');
 
 function route(app) {
@@ -8,6 +9,8 @@ function route(app) {
     });
 
     app.use('/news', newsRoute);
+
+    app.use('/posts', postsRoute);
 
     app.use('/', siteRoute);
 }
